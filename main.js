@@ -130,6 +130,9 @@ function Person (firstName, lastName, dob){
     this.getBirthYear = function (){
       return this.dob.getFullYear();
     }
+    this.getFullName =function(){
+      return `${this.firstName} ${this.lastName}`
+    }
 }
 
 //Instantiate object
@@ -139,5 +142,9 @@ const person2 = new Person('Mary', 'Poppins', '3/6/1990')
 console.log(person1);
 //to get a date
 console.log(person2.dob);
+console.log(person2.dob.getFullYear());
 
+console.log(person1.getBirthYear());
+console.log(person1.getFullName());
 
+//Start at 1:04:51 when returning 
