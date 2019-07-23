@@ -139,3 +139,5 @@ const person2 = new Person('Mary', 'Poppins', '3/6/1990')
 console.log(person1);
 //to get a date
 console.log(person2.dob);
+
+//Test change for terminal
