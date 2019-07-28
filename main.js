@@ -122,20 +122,39 @@ switch(color) {
     break;
 }
 
-//Constructor Function
-function Person (firstName, lastName, dob){
+// //Constructor Function
+// function Person (firstName, lastName, dob){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.dob = new Date(dob);
+// }
+
+// Person.prototype.getBirthYear = function() {
+//   return this.dob.getFullYear();
+// }
+
+// Person.prototype.getFullName = function() {
+  
+// }
+
+//Class adds method to the prototype, adds method which is a function inside a class called constructor
+class Person {
+  constructor(firstName, lastName, dob){
     this.firstName = firstName;
     this.lastName = lastName;
     this.dob = new Date(dob);
+  }
+
+  getBirthYear() {
+    return this.dob.getFullYear()
+  }
+
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
 }
 
-Person.prototype.getBirthYear = function() {
-  return this.dob.getFullYear();
-}
 
-Person.prototype.getFullName = function() {
-  return `${this.firstName} ${this.lastName}`;
-}
 
 //Instantiate object
 const person1 = new Person('Brian', 'Santos', '9/6/1981')
