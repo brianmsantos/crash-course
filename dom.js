@@ -41,9 +41,20 @@ function onSubmit(e) {
     e.preventDefault();
 
     if(nameInput.value === '' || emailInput.value === ''){
-            alert ('Please enter fields');
+            msg.classList.add('error')
+            msg.innerHTML = 'Please enter all fields';
+
+            setTimeout(() => msg.remove(), 3000)
         } else {
-            console.log('success');
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(`$
+            {nameInput.value} : ${emailInput.value}`))
+
+            userList.appendChild(li);
+
+            //Clear fields 
+            nameInput.value = '';
+            emailInput.value = '';
         }
     
 }
